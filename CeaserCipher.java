@@ -64,6 +64,7 @@ public class CeaserCipher{
 	public static void main(String[] args) {
 
 		// char[] ctext = encrypt(args[0].toCharArray(),10);
+		long time = System.currentTimeMillis();
 		String text;
 		int shift;
 
@@ -77,7 +78,7 @@ public class CeaserCipher{
 			text = "The Caesar cipher is a special case of the substitution cipher,"
 						+" which maps all possible pieces of plaintext (usually single letters, but not always)"
 						+" to corresponding pieces of ciphertext. There are only 26 Caesar ciphers; on the other hand, "
-						+"there 26! possible letter substitution ciphers.1 Our goal is to crack a Caesar-encrypted message, "
+						+"there 26! possible letter substitution ciphers. Our goal is to crack a Caesar-encrypted message, "
 						+"which means to find its key, the rotation number used to encrypt it. We can easily do this by brute force,"
 						+" by trying all 26 possible keys. The result of decrypting the message will almost certainly be gibberish"
 						+" for all but one key, but how can a computer recognize plausible English?";
@@ -108,9 +109,12 @@ public class CeaserCipher{
 		}
 
 		// System.out.println(pearsonChiSquared(getFrequencies(text.toCharArray())));
-
+		time =System.currentTimeMillis()-time;
+		System.out.println("Original Cipher Text: \n");
+		System.out.println(ctext);
 		System.out.println("\nBest PCS: "+bestPCS+"\nWith Cipher key: "+(26-bestGuess)+"\nWith Text:");
 		System.out.println(bestText);
+		System.out.println("Time taken: "+time+"ms");
 
 	}
 }
