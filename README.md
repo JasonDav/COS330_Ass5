@@ -1,7 +1,7 @@
 # COS330_Ass5
 This program takes any ceaser cipher text and attempts to decrypt it using Pearson's Chi Square Test. (Good 'ol stats baby!).
 
-##Compile and Run
+## Compile and Run
 Compile with `javac *.java`
 Run with `java CeaserCipher <text> <ceaser shift>`
 
